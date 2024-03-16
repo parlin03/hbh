@@ -21,6 +21,7 @@ class Registration extends CI_Controller
         ]);
         $this->form_validation->set_rules('angkatan', 'Angkatan', 'required|trim');
         $this->form_validation->set_rules('baju', 'Ukuran Baju', 'required|trim');
+        $this->form_validation->set_rules('gender', 'Jenis Kelamin', 'required|trim');
         $this->form_validation->set_rules('alamat', 'Alamat', 'required|trim');
         $this->form_validation->set_rules('hp', 'No Telpon', 'required|trim');
         // $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email|is_unique[user.email]', [
@@ -30,6 +31,7 @@ class Registration extends CI_Controller
         // $this->form_validation->set_rules('password2', 'Password', 'required|trim|matches[password1]');
         if ($this->form_validation->run() == false) {
             $data['title'] = 'Registrasi Peserta HBH IKATEK UNHAS 2024';
+            $data['angkatan'] = $this->db->get('angkatan')->result_array();
             $this->load->view('templates/auth_header', $data);
             $this->load->view('registration');
             $this->load->view('templates/auth_footer');
@@ -40,6 +42,7 @@ class Registration extends CI_Controller
                 'nim' => htmlentities($this->input->post('nim', true)),
                 'angkatan' => htmlentities($this->input->post('angkatan', true)),
                 'baju' => htmlentities($this->input->post('baju', true)),
+                'gender' => htmlentities($this->input->post('gender', true)),
                 'alamat' => htmlentities($this->input->post('alamat', true)),
                 'hp' => htmlentities($this->input->post('hp', true)),
                 'role_id' => 9,
