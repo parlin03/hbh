@@ -191,7 +191,8 @@
           <li><a href="#malam-puncak">MALAM PUNCAK ACARA</a></li>
         </ul>
       </div>
-      <div class="right"><a class="button blue gradient" href="<?= base_url('registration') ?>">Registration</a><a class="button green gradient" href="#">Login</a></div>
+      <!-- <a class="button blue gradient" href="<?= base_url('registration') ?>">Registration</a> -->
+      <div class="right"><a class="button green gradient" href="#">Login</a></div>
     </div>
     <div class="sections compact hidden">
       <div class="left"><a href="#" title="Slides Framework">HBH IKATEK UH</a></div>
@@ -233,11 +234,12 @@
                 <!-- <h1 class="ae-1 fromLeft">Sinergi untuk Masa Depan: </h1> -->
                 <!-- <p class="ae-2 fromLeft"><span class="opacity-8">Memperkuat Kebersamaan melalui Inovasi dan Keberlanjutan.</span></p> -->
                 <img class="ae-4 fromTopLeft" width="400" src="assets/home/img/hbh-title.png" alt="HBH Thumbnail" data-action="zoom" />
-                <h3 class="ae-1 fromLeft" style="color: red;"><b>12 - 13 April 2024</b></h3>
+                <p class="ae-2 fromLeft"><span class="opacity-10"><b>12 - 13 April 2024</b></span>
+                </p>
                 <a href="<?= base_url('registration') ?>" class="button blue gradient ae-3 fromCenter cropLeft">Registration</a><a href="https://www.instagram.com/hbhikatekunhas/" class="button white ae-4 fromCenter">Learn more</a>
               </li>
               <li class="col-6-12">
-                <img class="ae-4" width="350" src="assets/home/img/hbh.png" alt="HBH Thumbnail" data-action="zoom" />
+                <img class="ae-4" width="200" src="assets/home/img/hbh.png" alt="HBH Thumbnail" data-action="zoom" />
               </li>
             </ul>
           </div>
@@ -245,7 +247,7 @@
         </div>
       </div>
     </div>
-    <div class="background" style="background-image:url(assets/home/img/background/img-34.jpg)"></div>
+    <div class="background" style="background-image:url(assets/home/img/background/teknik.jpg)"></div>
   </section>
 
   <!-- Slide 2 (#60) -->
