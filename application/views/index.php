@@ -236,7 +236,7 @@
                 <img class="ae-4 fromTopLeft" width="400" src="assets/home/img/hbh-title.png" alt="HBH Thumbnail" data-action="zoom" />
                 <p class="ae-2 fromLeft"><span class="opacity-10"><b>12 - 13 April 2024</b></span>
                 </p>
-                <a href="<?= base_url('registration') ?>" class="button blue gradient ae-3 fromCenter cropLeft">Registration</a><a href="https://www.instagram.com/hbhikatekunhas/" class="button white ae-4 fromCenter">Learn more</a>
+                <a href="<?= base_url('registration') ?>" class="button blue gradient ae-3 fromCenter">Registration</a><a href="https://www.instagram.com/hbhikatekunhas/" class="button white ae-4 fromCenter">Learn more</a>
               </li>
               <li class="col-6-12">
                 <img class="ae-4" width="200" src="assets/home/img/hbh.png" alt="HBH Thumbnail" data-action="zoom" />
