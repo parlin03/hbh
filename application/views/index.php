@@ -233,7 +233,7 @@
                 <!-- <h1 class="ae-1 fromLeft">Sinergi untuk Masa Depan: </h1> -->
                 <!-- <p class="ae-2 fromLeft"><span class="opacity-8">Memperkuat Kebersamaan melalui Inovasi dan Keberlanjutan.</span></p> -->
                 <img class="ae-4 fromTopLeft" width="400" src="assets/home/img/hbh-title.png" alt="HBH Thumbnail" data-action="zoom" />
-                <h1 class="ae-1 fromLeft">12 - 13 April 2024</h1>
+                <h3 class="ae-1 fromLeft" style="color: red;"><b>12 - 13 April 2024</b></h3>
                 <a href="<?= base_url('registration') ?>" class="button blue gradient ae-3 fromCenter cropLeft">Registration</a><a href="https://www.instagram.com/hbhikatekunhas/" class="button white ae-4 fromCenter">Learn more</a>
               </li>
               <li class="col-6-12">

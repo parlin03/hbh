@@ -9,7 +9,7 @@ class Registration extends CI_Controller
         $this->load->library('form_validation');
     }
 
-    public function index()
+    public function Index()
     {
         // if ($this->session->userdata('email')) {
         //     redirect('user');
@@ -63,9 +63,22 @@ class Registration extends CI_Controller
             // $this->db->insert('user_token', $user_token);
             // $this->_sendEmail($token, 'verify');
 
+            $this->session->set_flashdata('name', $data['name']);
 
-            $this->session->set_flashdata('message', '<div class="alert alert-success" role ="alert">Selamat anda sudah terdaftar sebagai peserta HBH IKATEK UNHAS 2024</div>');
-            redirect('index');
+            // $this->session->set_flashdata('message', '<div class="alert alert-success" role ="alert">Selamat anda sudah terdaftar sebagai peserta HBH IKATEK UNHAS 2024</div>');
+            redirect('registration/thanks', $data);
         }
+    }
+
+    public function Thanks()
+    {
+
+        $data['title'] = 'Registrasi Peserta HBH IKATEK UNHAS 2024';
+        $data['name'] = $this->session->flashdata('name');
+
+        // $data['angkatan'] = $this->db->get('angkatan')->result_array();
+        $this->load->view('templates/auth_header', $data);
+        $this->load->view('thanks', $data);
+        $this->load->view('templates/auth_footer');
     }
 }
