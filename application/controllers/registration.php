@@ -66,7 +66,7 @@ class Registration extends CI_Controller
             $this->session->set_flashdata('name', $data['name']);
 
             // $this->session->set_flashdata('message', '<div class="alert alert-success" role ="alert">Selamat anda sudah terdaftar sebagai peserta HBH IKATEK UNHAS 2024</div>');
-            redirect('thanks', $data);
+            redirect('thanks');
         }
     }
 }
