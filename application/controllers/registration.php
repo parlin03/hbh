@@ -70,7 +70,7 @@ class Registration extends CI_Controller
         }
     }
 
-    public function Thanks()
+    public function thanks()
     {
 
         $data['title'] = 'Registrasi Peserta HBH IKATEK UNHAS 2024';
