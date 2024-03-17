@@ -230,12 +230,14 @@
           <div class="fix-12-12">
             <ul class="flex fixedSpaces verticalCenter reverse">
               <li class="col-6-12 left middle">
-                <h1 class="ae-1 fromLeft">Sinergi untuk Masa Depan: </h1>
-                <p class="ae-2 fromLeft"><span class="opacity-8">Memperkuat Kebersamaan melalui Inovasi dan Keberlanjutan.</span></p>
+                <!-- <h1 class="ae-1 fromLeft">Sinergi untuk Masa Depan: </h1> -->
+                <!-- <p class="ae-2 fromLeft"><span class="opacity-8">Memperkuat Kebersamaan melalui Inovasi dan Keberlanjutan.</span></p> -->
+                <img class="ae-4 fromTopLeft" width="400" src="assets/home/img/hbh-title.png" alt="HBH Thumbnail" data-action="zoom" />
+                <h1 class="ae-1 fromLeft">12 - 13 April 2024</h1>
                 <a href="<?= base_url('registration') ?>" class="button blue gradient ae-3 fromCenter cropLeft">Get Started</a><a href="https://www.instagram.com/hbhikatekunhas/" class="button white ae-4 fromCenter">Learn more</a>
               </li>
               <li class="col-6-12">
-                <img class="ae-4" width="605" src="assets/home/img/hbh.jpeg" alt="HBH Thumbnail" data-action="zoom" />
+                <img class="ae-4" width="400" src="assets/home/img/hbh.png" alt="HBH Thumbnail" data-action="zoom" />
               </li>
             </ul>
           </div>
@@ -427,12 +429,13 @@
     <div class="sections desktop">
       <div class="center"><span class="nextSlide"><svg>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-down"></use>
-          </svg></span></div>
+          </svg></span>
+      </div>
     </div>
     <div class="sections compact hidden">
       <div class="right">
-        <span data-dropdown-id="2" class="button actionButton dropdownTrigger"><svg>
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#share"></use>
+        <span data-dropdown-id="2" class="nextSlide"><svg>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-down"></use>
           </svg></span>
       </div>
     </div>

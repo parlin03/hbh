@@ -1,3 +1,4 @@
+<script src="<?= base_url('assets/') ?>js/jquery-2.2.3.min.js"></script>
 <script src="<?= base_url('assets/') ?>js/select2.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
@@ -75,7 +76,12 @@
                             </button>
 
                         </form>
-                        <!-- <hr> -->
+                        <!-- <hr>
+                        <div class="text-center">
+                            <a href="https://wa.me/628114605005?text=Hi%20Qiscus" class="floating" target="_blank">
+                                Contact Admin <i class="fab fa-whatsapp fab-icon"></i>
+                            </a>
+                        </div> -->
                         <!-- <div class="text-center">
                             <a class="small" href="<?= base_url('auth/forgotpassword') ?>">Forgot Password?</a>
                         </div>
