@@ -1,5 +1,7 @@
 <script src="<?= base_url('assets/') ?>js/jquery-2.2.3.min.js"></script>
-<script src="<?= base_url('assets/') ?>js/select2.min.js"></script>
+<!-- <script src="<?= base_url('assets/') ?>js/select2.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.8/js/select2.min.js" defer></script>
+
 <script type="text/javascript">
     $(document).ready(function() {
         $('.angkatan').select2();
