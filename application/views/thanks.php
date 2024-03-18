@@ -12,7 +12,7 @@
                                 TERIMA KAZIH ZENIOR ZUDAH MENDAFTAR<br>
                                 Tiada Kezan Tanpa Kehadiranta’ Kanda <?= strtoupper($name); ?>
                                 <br>
-                                <img class="ae-4" width="350" src="<?= base_url(); ?>/assets/home/img/hbh-home-dark.png" alt=" HBH IKATEK UH<br>TRANSFORMATIVE 2024<br>12-13 April 2024" data-action="zoom" />
+                                <img class="ae-4" width="200" src="<?= base_url(); ?>/assets/home/img/hbh-home-dark.png" alt=" HBH IKATEK UH<br>TRANSFORMATIVE 2024<br>12-13 April 2024" data-action="zoom" />
 
                             </h1>
                         </div>
