@@ -16,7 +16,9 @@
                 <div class="col-lg">
                     <div class="p-5">
                         <div class="text-center">
-                            <h1 class="h4 text-gray-900 mb-4">Registrasi Peserta <br>HBH IKATEK UNHAS 2024</h1>
+                            <h1 class="h4 text-gray-900 ">Registrasi Peserta</h1>
+                            <p><img class="ae-4 mb-4" width="200" src="<?= base_url(); ?>/assets/home/img/hbh-home-dark.png" alt=" HBH IKATEK UHNHAS 2024" data-action="zoom" /></p>
+
                         </div>
                         <form class="user" method="POST" action="<?= base_url('registration') ?>">
 
