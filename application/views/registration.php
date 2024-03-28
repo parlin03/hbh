@@ -17,7 +17,8 @@
                     <div class="p-5">
                         <div class="text-center">
                             <h1 class="h4 text-gray-900 ">Registrasi Peserta</h1>
-                            <p><img class="ae-4 mb-4" width="200" src="<?= base_url(); ?>/assets/home/img/hbh-home-dark.png" alt=" HBH IKATEK UHNHAS 2024" data-action="zoom" /></p>
+                            <p>HBH IKATEK UHNHAS 2024</p>
+                            <!-- <p><img class="ae-4 mb-4" width="200" src="<?= base_url(); ?>/assets/home/img/hbh-home-dark.png" alt=" HBH IKATEK UHNHAS 2024" data-action="zoom" /></p> -->
 
                         </div>
                         <form class="user" method="POST" action="<?= base_url('registration') ?>">
@@ -29,13 +30,33 @@
 
                             </div>
                             <div class="form-group row">
-                                <div class="col-sm-8 mb-3 mb-sm-0">
+                                <div class="col-sm-4 mb-3 mb-sm-0">
                                     <input type="text" class="form-control form-control-user text-center" id="nim" name="nim" placeholder="Stambuk/NIM" value="<?= set_value('nim') ?>">
                                     <?= form_error('nim', '<small class="text-danger pl-3" >', '</small>'); ?>
                                 </div>
+                                <div class="col-sm-4 mb-3">
+                                    <select id="jurusan" name="jurusan" class="form-control select2 text-center">
+                                        <option value="" disabled selected hidden>Jurusan</option>
+                                        <option value="Teknik Sipil">Teknik Sipil</option>
+                                        <option value="Teknik Mesin">Teknik Mesin</option>
+                                        <option value="Teknik Perkapalan">Teknik Perkapalan</option>
+                                        <option value="Teknik Elektro">Teknik Elektro</option>
+                                        <option value="Arsitektur">Arsitektur</option>
+                                        <option value="Teknik Geologi">Teknik Geologi</option>
+                                        <option value="Teknik Industri">Teknik Industri</option>
+                                        <option value="Teknik Kelautan">Teknik Kelautan</option>
+                                        <option value="Teknik Sistem Perkapalan">Teknik Sistem Perkapalan</option>
+                                        <option value="Teknik Perencanaan Wilayah Kota">Teknik Perencanaan Wilayah Kota</option>
+                                        <option value="Teknik Pertambangan">Teknik Pertambangan</option>
+                                        <option value="Teknik Informatika">Teknik Informatika</option>
+                                        <option value="Teknik Lingkungan">Teknik Lingkungan</option>
+                                    </select>
+                                    <?= form_error('jurusan', '<small class="text-danger pl-3" >', '</small>'); ?>
+
+                                </div>
                                 <div class="col-sm-4">
-                                    <select id="angkatan" name="angkatan" class="form-control select2 text-center angkatan">
-                                        <option value="" selected>Angkatan</option>
+                                    <select id="angkatan" name="angkatan" class="form-control  text-center  g">
+                                        <option value="" disabled selected hidden>Angkatan</option>
                                         <?php foreach ($angkatan as $m) : ?>
                                             <option value="<?= $m['tahun']; ?>"><?= $m['tahun']; ?></option>
                                         <?php endforeach; ?>
@@ -47,7 +68,7 @@
                             <div class="form-group row">
                                 <div class="col-sm-6 mb-3 mb-sm-0">
                                     <select id="baju" name="baju" class="form-control select2 text-center">
-                                        <option value="" selected>Ukuran Baju</option>
+                                        <option value="" disabled selected hidden>Ukuran Baju</option>
                                         <option value="S">S</option>
                                         <option value="M">M</option>
                                         <option value="L">L</option>
@@ -59,9 +80,10 @@
                                     </select>
                                     <?= form_error('baju', '<small class="text-danger pl-3" >', '</small>'); ?>
                                 </div>
+
                                 <div class="col-sm-6">
                                     <select id="gender" name="gender" class="form-control select2 text-center">
-                                        <option value="" selected>Jenis Kelamin</option>
+                                        <option value="" disabled selected hidden>Jenis Kelamin</option>
                                         <option value="Pria">Pria</option>
                                         <option value="Wanita">Wanita</option>
                                     </select>

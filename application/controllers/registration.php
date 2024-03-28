@@ -19,6 +19,7 @@ class Registration extends CI_Controller
         $this->form_validation->set_rules('nim', 'Nim', 'required|trim|is_unique[peserta.nim]', [
             'is_unique' => 'Stambuk/NIM ini sudah terdaftar'
         ]);
+        $this->form_validation->set_rules('jurusan', 'Jurusan', 'required|trim');
         $this->form_validation->set_rules('angkatan', 'Angkatan', 'required|trim');
         $this->form_validation->set_rules('baju', 'Ukuran Baju', 'required|trim');
         $this->form_validation->set_rules('gender', 'Jenis Kelamin', 'required|trim');
@@ -40,6 +41,7 @@ class Registration extends CI_Controller
             $data = [
                 'name' => htmlentities($this->input->post('name', true)),
                 'nim' => htmlentities($this->input->post('nim', true)),
+                'jurusan' => htmlentities($this->input->post('jurusan', true)),
                 'angkatan' => htmlentities($this->input->post('angkatan', true)),
                 'baju' => htmlentities($this->input->post('baju', true)),
                 'gender' => htmlentities($this->input->post('gender', true)),

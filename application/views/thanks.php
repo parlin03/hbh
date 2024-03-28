@@ -16,7 +16,7 @@
                             </p>
                             <span>
 
-                                <img class="ae-4" width="200" src="<?= base_url(); ?>/assets/home/img/hbh-home-dark.png" alt=" HBH IKATEK UH<br>TRANSFORMATIVE 2024<br>12-13 April 2024" data-action="zoom" />
+                                <!-- <img class="ae-4" width="200" src="<?= base_url(); ?>/assets/home/img/hbh-home-dark.png" alt=" HBH IKATEK UH<br>TRANSFORMATIVE 2024<br>12-13 April 2024" data-action="zoom" /> -->
                             </span>
                         </div>
 
