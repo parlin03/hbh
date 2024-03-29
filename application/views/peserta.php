@@ -1,5 +1,5 @@
 <!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
+<div class="container">
     <!-- Content Header (Page header) -->
     <div class="content-header">
         <div class="container-fluid">
@@ -32,7 +32,7 @@
                                         <div class="panel panel-primary">
                                             <div class="panel-body">
                                                 <div class="row">
-                                                    <div class="col-md-8">
+                                                    <div class="col-md-12   ">
 
                                                         <div id="container" style="min-width: 400px; height: 480px; margin: 0 auto"></div>
                                                     </div>
@@ -190,7 +190,7 @@
         var chart;
         $(document).ready(function() {
             $.getJSON("<?php echo site_url('peserta/list'); ?>", function(json) {
-
+                // var data_angkatan = <?php echo $angkatan; ?>;
                 chart0 = new Highcharts.Chart({
                     chart: {
                         renderTo: 'container',
@@ -203,7 +203,8 @@
                         text: ''
                     },
                     xAxis: {
-                        // categories: ['<a href="<?= base_url('potensi/tim50/panakkukang'); ?>">Panakkukang</a>', '<a href="<?= base_url('potensi/tim50/biringkanaya'); ?>">Biringkanaya</a>', '<a href="<?= base_url('potensi/tim50/manggala'); ?>">Manggala</a>', '<a href="<?= base_url('potensi/tim50/tamalanrea'); ?>">Tamalanrea</a>']
+                        categories: []
+                        //  ['<a href="<?= base_url('potensi/tim50/panakkukang'); ?>">Panakkukang</a>', '<a href="<?= base_url('potensi/tim50/biringkanaya'); ?>">Biringkanaya</a>', '<a href="<?= base_url('potensi/tim50/manggala'); ?>">Manggala</a>', '<a href="<?= base_url('potensi/tim50/tamalanrea'); ?>">Tamalanrea</a>']
                     },
                     yAxis: {
                         title: {
@@ -242,6 +243,85 @@
 
     });
 </script>
+
+<!-- <script type="text/javascript">
+    $(document).ready(function() {
+        var options = {
+            chart: {
+                renderTo: 'mygraph',
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false
+            },
+            accessibility: {
+                enabled: false
+            },
+            title: {
+                text: 'Potensi Jaring Suara'
+            },
+            tooltip: {
+                formatter: function() {
+                    return '<b>' + this.point.name + '</b>: ' + this.percentage + ' %';
+                }
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        color: '#000000',
+                        connectorColor: 'green',
+                        formatter: function() {
+                            return '<b>' + this.point.name + '</b>: ' + Highcharts.numberFormat(this.percentage, 2) + ' % ';
+                        }
+                    },
+                    showInLegend: true
+                }
+            },
+            series: [{
+                type: 'pie',
+                name: 'Browser share',
+                data: []
+            }]
+        }
+
+        $.getJSON("<?php echo site_url('peserta/list'); ?>", function(json) {
+            options.series[0].data = json;
+            chart = new Highcharts.Chart(options);
+        });
+
+    });
+</script> -->
+<!-- <script type="text/javascript">
+    $(function() {
+
+        var data_total = <?php echo $total; ?>;
+        var data_angkatan = <?php echo $angkatan; ?>;
+
+        $('#container').highcharts({
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Yearly Website Ratio'
+            },
+            xAxis: {
+                categories: data_angkatan
+            },
+            yAxis: {
+                title: {
+                    text: 'Rate'
+                }
+            },
+            series: [{
+                name: 'data_angkatan',
+                data: data_total
+            }]
+        });
+    });
+</script> -->
+
 
 <script>
     $(function() {

@@ -22,6 +22,15 @@ class Peserta extends CI_Controller
         $data['pencapaian'] = $this->peserta_m->getPencapaian(); //array banyak
         $data['export'] = $this->peserta_m->getPesertaExport();
 
+
+        // $Capaian = $this->peserta_model->getDataCapaian();
+
+        $query = $this->db->query("SELECT angkatan, count(id) as total FROM peserta 
+        GROUP BY angkatan ORDER BY angkatan ASC");
+
+        $data['total'] = json_encode(array_column($query->result(), 'total'), JSON_NUMERIC_CHECK);
+        $data['category'] = json_encode(array_column($query->result(), 'angkatan'), JSON_NUMERIC_CHECK);
+
         $this->load->view('templates/header', $data);
         // $this->load->view('templates/sidebar', $data);
         // $this->load->view('templates/topbar', $data);
