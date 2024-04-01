@@ -26,9 +26,11 @@ class Peserta_model extends CI_Model
 
     public function getDataCapaian()
     {
-        $this->db->select('angkatan, count(id) as total');
+
+        $this->db->select('tahun, count(peserta.id) as total');
         $this->db->from('peserta');
-        $this->db->group_by('angkatan');
+        $this->db->join('angkatan', 'angkatan.tahun =peserta.angkatan', 'RIGHT');
+        $this->db->group_by('tahun');
         $query = $this->db->get();
         return $query->result();
     }

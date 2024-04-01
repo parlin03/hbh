@@ -25,12 +25,7 @@ class Peserta extends CI_Controller
 
         // $Capaian = $this->peserta_model->getDataCapaian();
 
-        $query = $this->db->query("SELECT angkatan, count(id) as total FROM peserta 
-        GROUP BY angkatan ORDER BY angkatan ASC");
-
-        $data['total'] = json_encode(array_column($query->result(), 'total'), JSON_NUMERIC_CHECK);
-        $data['category'] = json_encode(array_column($query->result(), 'angkatan'), JSON_NUMERIC_CHECK);
-
+    
         $this->load->view('templates/header', $data);
         // $this->load->view('templates/sidebar', $data);
         // $this->load->view('templates/topbar', $data);
@@ -45,7 +40,7 @@ class Peserta extends CI_Controller
 
         $Capaian = $this->peserta_model->getDataCapaian();
         $rows1 = array();
-        $rows1['name'] = 'angkatan';
+        $rows1['name'] = 'Peserta';
         $rows1['type'] = 'column';
         foreach ($Capaian as $c) {
             $rows1['data'][] =  $c->total;
