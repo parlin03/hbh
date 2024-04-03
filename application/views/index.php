@@ -189,6 +189,9 @@
           <li><a href="#hzh">HZH League</a></li>
           <li><a href="#domino">DOMINO</a></li>
           <li><a href="#malam-puncak">MALAM PUNCAK ACARA</a></li>
+          <li><a href="https://news.hbhikatekunhas.org/">NEWS</a></li>
+          <li><a href="https://twibbon.hbhikatekunhas.org/">TWIBBON</a></li>
+          <li><a href="<?= base_url('peserta'); ?>">Peserta</a></li>
         </ul>
       </div>
       <!-- <a class="button blue gradient" href="<?= base_url('registration') ?>">Registration</a> -->
@@ -218,6 +221,8 @@
         <li><a href="#hzh">HZH League</a></li>
         <li><a href="#domino">DOMINO</a></li>
         <li><a href="#malam-puncak">MALAM PUNCAK ACARA</a></li>
+        <li><a href="https://news.hbhikatekunhas.org/">NEWS</a></li>
+        <li><a href="https://twibbon.hbhikatekunhas.org/">TWIBBON</a></li>
       </ul>
     </div>
   </nav>

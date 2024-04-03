@@ -25,6 +25,9 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Peserta HBH Ikatek Unhas terdaftar <b><?= $total; ?></b> orang</h3>
+                        </div>
                         <div class="card-body">
                             <div class="row ">
                                 <div class="container" style="margin-top:20px">
@@ -48,46 +51,48 @@
                         </div>
                         <!-- /.row -->
 
-                        <div class="row">
 
-                            <div class="col-6">
+                    </div><!--/. container-fluid -->
+                    <div class="row">
 
-                                <div class="card">
-                                    <!-- <div class="card-header">
+                        <div class="col-md-6">
+
+                            <div class="card">
+                                <!-- <div class="card-header">
                                     <h3 class="card-title">DataTable with default features</h3>
                                 </div> -->
-                                    <!-- /.card-header -->
-                                    <div class="card-body">
-                                        <table id="example1" class="table table-bordered table-striped">
-                                            <thead>
+                                <!-- /.card-header -->
+                                <div class="card-body">
+                                    <table id="example1" class="table table-bordered table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Nama</th>
+                                                <th>Angkatan</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php if (empty($export)) : ?>
                                                 <tr>
-                                                    <th>#</th>
-                                                    <th>Nama</th>
-                                                    <th>Angkatan</th>
+                                                    <td colspan="7">
+                                                        <div class="alert alert-danger" role="alert">
+                                                            data not found!
+                                                        </div>
+                                                    </td>
                                                 </tr>
-                                            </thead>
-                                            <tbody>
-                                                <?php if (empty($export)) : ?>
-                                                    <tr>
-                                                        <td colspan="7">
-                                                            <div class="alert alert-danger" role="alert">
-                                                                data not found!
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                <?php endif; ?>
-                                                <?php $i = 1; ?>
-                                                <?php
-                                                foreach ($export as $row) : ?>
-                                                    <tr>
-                                                        <td><?= $i; ?></td>
-                                                        <td><?= $row['name'] ?></td>
-                                                        <td><?= $row['angkatan'] ?></td>
-                                                    </tr>
-                                                    <?php $i++; ?>
-                                                <?php endforeach; ?>
-                                            </tbody>
-                                            <!-- <tfoot>
+                                            <?php endif; ?>
+                                            <?php $i = 1; ?>
+                                            <?php
+                                            foreach ($export as $row) : ?>
+                                                <tr>
+                                                    <td><?= $i; ?></td>
+                                                    <td><?= $row['name'] ?></td>
+                                                    <td><?= $row['angkatan'] ?></td>
+                                                </tr>
+                                                <?php $i++; ?>
+                                            <?php endforeach; ?>
+                                        </tbody>
+                                        <!-- <tfoot>
                                             <tr>
                                                 <th>Rendering engine</th>
                                                 <th>Browser</th>
@@ -96,61 +101,60 @@
                                                 <th>CSS grade</th>
                                             </tr>
                                         </tfoot> -->
-                                        </table>
-                                    </div>
-                                    <!-- /.card-body -->
+                                    </table>
                                 </div>
-                                <!-- /.card -->
+                                <!-- /.card-body -->
                             </div>
-                            <!-- /.col -->
-
-                            <div class="col-6">
-
-                                <div class="card">
-                                    <!-- <div class="card-header">
-<h3 class="card-title">DataTable with default features</h3>
-</div> -->
-                                    <!-- /.card-header -->
-                                    <div class="card-body">
-                                        <table id="pencapaian" class="table table-bordered table-striped">
-                                            <thead>
-                                                <tr>
-                                                    <th>#</th>
-                                                    <th>Angkatan</th>
-                                                    <th>Total</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <?php if (empty($pencapaian)) : ?>
-                                                    <tr>
-                                                        <td colspan="7">
-                                                            <div class="alert alert-danger" role="alert">
-                                                                data not found!
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                <?php endif; ?>
-                                                <?php $i = 1; ?>
-                                                <?php
-                                                foreach ($pencapaian as $row) : ?>
-                                                    <tr>
-                                                        <td><?= $i; ?></td>
-                                                        <td><?= $row['angkatan'] ?></td>
-                                                        <td><?= $row['total'] ?></td>
-                                                    </tr>
-                                                    <?php $i++; ?>
-                                                <?php endforeach; ?>
-                                            </tbody>
-
-                                        </table>
-                                    </div>
-                                    <!-- /.card-body -->
-                                </div>
-                                <!-- /.card -->
-                            </div>
-                            <!-- /.col -->
+                            <!-- /.card -->
                         </div>
-                    </div><!--/. container-fluid -->
+                        <!-- /.col -->
+
+                        <div class="col-md-6">
+
+                            <div class="card">
+                                <!-- <div class="card-header">
+                                    <h3 class="card-title">Peserta HBH Ikatek Unhas <?= $total; ?></h3>
+                                </div> -->
+                                <!-- /.card-header -->
+                                <div class="card-body">
+                                    <table id="pencapaian" class="table table-bordered table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Angkatan</th>
+                                                <th>Total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php if (empty($pencapaian)) : ?>
+                                                <tr>
+                                                    <td colspan="7">
+                                                        <div class="alert alert-danger" role="alert">
+                                                            data not found!
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            <?php endif; ?>
+                                            <?php $i = 1; ?>
+                                            <?php
+                                            foreach ($pencapaian as $row) : ?>
+                                                <tr>
+                                                    <td><?= $i; ?></td>
+                                                    <td><?= $row['angkatan'] ?></td>
+                                                    <td><?= $row['total'] ?></td>
+                                                </tr>
+                                                <?php $i++; ?>
+                                            <?php endforeach; ?>
+                                        </tbody>
+
+                                    </table>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                            <!-- /.card -->
+                        </div>
+                        <!-- /.col -->
+                    </div>
     </section>
     <!-- /.content -->
 </div>

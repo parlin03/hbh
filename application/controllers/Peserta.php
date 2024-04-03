@@ -20,12 +20,13 @@ class Peserta extends CI_Controller
 
 
         $data['pencapaian'] = $this->peserta_m->getPencapaian(); //array banyak
+        $data['total'] = $this->peserta_m->getPesertaTotal();
         $data['export'] = $this->peserta_m->getPesertaExport();
 
 
         // $Capaian = $this->peserta_model->getDataCapaian();
 
-    
+
         $this->load->view('templates/header', $data);
         // $this->load->view('templates/sidebar', $data);
         // $this->load->view('templates/topbar', $data);
@@ -39,6 +40,7 @@ class Peserta extends CI_Controller
         // $target = $this->peserta_model->getDataTarget();
 
         $Capaian = $this->peserta_model->getDataCapaian();
+
         $rows1 = array();
         $rows1['name'] = 'Peserta';
         $rows1['type'] = 'column';

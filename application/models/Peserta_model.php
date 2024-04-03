@@ -34,6 +34,10 @@ class Peserta_model extends CI_Model
         $query = $this->db->get();
         return $query->result();
     }
+    public function getPesertaTotal()
+    {
+        return $this->db->count_all('peserta');
+    }
 
 
     public function getPencapaian()
