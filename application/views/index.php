@@ -271,9 +271,9 @@
                 <div class="relative">
                   <img src="assets/home/img/datetime.png" class="ae-3 fromCenter app-26" alt="app" />
                   <div class="text-26">
-                    <h3 class="ae-3 fromRight">Jumat 12 April 2024</h3>
+                    <h3 class="ae-3 fromRight">Jumat - Sabtu, 12 s/d 13 April 2024</h3>
                     <div class="ae-5 fromLeft">
-                      <p class="tiny opacity-6">Jam 08.00 - end</p>
+                      <p class="tiny opacity-6">Jam 08.09 - Till The End</p>
                     </div>
                   </div>
                 </div>
@@ -314,7 +314,7 @@
                   <div class="text-26">
                     <h3 class="ae-3 fromRight">Sabtu 13 April 2024</h3>
                     <div class="ae-5 fromRight">
-                      <p class="tiny opacity-6">Jam 06.00 - 09.00</p>
+                      <p class="tiny opacity-6">Jam 06.09 - Till The End</p>
                     </div>
                   </div>
                 </div>
@@ -344,14 +344,14 @@
               <li class="col-4-12 left">
                 <h1 class="ae-1 fromLeft">HZH League</h1>
                 <div class="ae-2 fromLeft">
-                  <p class="opacity-8">Lapangan Karsa <br>Jl. Perintis Kemerdekaan</p>
+                  <p class="opacity-8">Lapangan Karsa Minisoccer <br>Jl. Perintis Kemerdekaan</p>
                 </div>
                 <div class="relative">
                   <img src="assets/home/img/datetime.png" class="ae-3 fromCenter app-26" alt="app" />
                   <div class="text-26">
                     <h3 class="ae-3 fromRight">Sabtu 13 April 2024</h3>
                     <div class="ae-5 fromRight">
-                      <p class="tiny opacity-6">Jam 08.00 - 17.00</p>
+                      <p class="tiny opacity-6">Jam 08.09 - Till The End</p>
                     </div>
                   </div>
                 </div>
@@ -382,14 +382,14 @@
               <li class="col-4-12 left">
                 <h1 class="ae-1 fromLeft">DOMINO</h1>
                 <div class="ae-2 fromLeft">
-                  <p class="opacity-8">Lapangan Karsa <br>Jl. Perintis Kemerdekaan</p>
+                  <p class="opacity-8">Fakultas Teknik Unhas, Kab. Gowa</p>
                 </div>
                 <div class="relative">
                   <img src="assets/home/img/datetime.png" class="ae-3 fromCenter app-26" alt="app" />
                   <div class="text-26">
                     <h3 class="ae-3 fromRight">Sabtu 13 April 2024</h3>
                     <div class="ae-5 fromRight">
-                      <p class="tiny opacity-6">Jam 10.00 - 17.00</p>
+                      <p class="tiny opacity-6">Jam 09.09 - Till The End</p>
                     </div>
                   </div>
                 </div>
@@ -416,7 +416,7 @@
             <ul class="fix-7-12 margin-top-10">
               <li class="col-12-6 col-tablet-1-2 col-phablet-1-1 ae-5 fromLeft">
                 <h3>Kampus Teknik Gowa</h3>
-                <p class="tiny opacity-6">Sabtu 13 April 2024 <br>Jam 19.00 - end</p>
+                <p class="tiny opacity-6">Sabtu 13 April 2024 <br>Jam 19.09 - Till The End</p>
               </li>
 
             </ul>
