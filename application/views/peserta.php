@@ -26,7 +26,17 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Peserta HBH Ikatek Unhas terdaftar <b><?= $total; ?></b> orang</h3>
+                            <div class="row">
+                                <div class="col-sm-6">
+
+                                    <h3 class="card-title">Peserta HBH Ikatek Unhas terdaftar <b><?= $total; ?></b> orang </h3>
+                                </div>
+                                <div class="col-sm-6">
+
+                                    <small class="float-right"> <?= date('Y-m-d H:i:s'); ?></small>
+                                </div>
+                            </div>
+
                         </div>
                         <div class="card-body">
                             <div class="row ">
@@ -37,7 +47,7 @@
                                                 <div class="row">
                                                     <div class="col-md-12   ">
 
-                                                        <div id="container" style="min-width: 400px; height: 480px; margin: 0 auto"></div>
+                                                        <div id="container" style="min-width: 400px; height: 300px; margin: 0 auto"></div>
                                                     </div>
 
                                                 </div>

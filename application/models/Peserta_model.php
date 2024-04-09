@@ -56,4 +56,16 @@ class Peserta_model extends CI_Model
         $this->db->select('name, angkatan');
         return $this->db->get('peserta')->result_array();
     }
+
+    public function getLastDateTime()
+    {
+        // $this->db->select('date_created');
+        // $this->db->from('peserta');
+        // $this->db->order_by('id', 'DESC');
+        // $this->db->limit(1);
+        // $query = $this->db->get();
+        // return $query->result();
+
+        return $this->db->get("peserta")->row();
+    }
 }

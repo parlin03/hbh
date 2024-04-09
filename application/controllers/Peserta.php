@@ -22,7 +22,7 @@ class Peserta extends CI_Controller
         $data['pencapaian'] = $this->peserta_m->getPencapaian(); //array banyak
         $data['total'] = $this->peserta_m->getPesertaTotal();
         $data['export'] = $this->peserta_m->getPesertaExport();
-
+        $data['tanggal'] = $this->peserta_m->getLastDateTime();
 
         // $Capaian = $this->peserta_model->getDataCapaian();
 
