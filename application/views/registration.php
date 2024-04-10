@@ -98,7 +98,7 @@
                                 <input type="text" class="form-control form-control-user text-center" id="hp" name="hp" placeholder="No. Telpon" value="<?= set_value('hp') ?>">
                                 <?= form_error('hp', '<small class="text-danger pl-3" >', '</small>'); ?>
                             </div>
-                            <button type="submit" class="btn btn-primary btn-user btn-block">
+                            <button disabled type="submit" class="btn btn-primary btn-user btn-block">
                                 Registrasi
                             </button>
 
