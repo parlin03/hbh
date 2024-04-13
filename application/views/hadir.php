@@ -58,7 +58,10 @@
                                     <?php
                                     foreach ($register as $row) : ?>
                                         <tr>
-                                            <td><?= $i; ?></td>
+                                            <!-- <td><?= $i; ?></td> -->
+                                            <td class="text-center">
+                                                <a href="<?= base_url('') . 'hadir/check/' . $row['id']; ?>" onclick="return confirm('Verifikasi kehadiran kanda <?= $row['name']; ?> ?');" class="btn btn-primary btn-circle" data-popup="tooltip" data-placement="top" title="Hadir"><i class="fas fa-fw fa-check " aria-hidden="true"></i>
+                                            </td>
                                             <td><?= $row['name'] ?></td>
                                             <td><?= $row['nim'] ?></td>
                                             <td><?= $row['angkatan'] ?></td>
@@ -89,21 +92,23 @@
                 <div class="col-md-12">
 
                     <div class="card">
-                        <!-- <div class="card-header">
-                                    <h3 class="card-title">Peserta HBH Ikatek Unhas <?= $total; ?></h3>
-                                </div> -->
+                        <div class="card-header">
+                            <h3 class="card-title"><b>Daftar Peserta Yang Hadir Di HBH Ikatek Unhas</b></h3>
+                        </div>
                         <!-- /.card-header -->
                         <div class="card-body">
                             <table id="pencapaian" class="table table-bordered table-striped">
                                 <thead>
                                     <tr>
                                         <th>#</th>
+                                        <th>Nama</th>
+                                        <th>Nim</th>
                                         <th>Angkatan</th>
-                                        <th>Total</th>
+                                        <th>Baju</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php if (empty($pencapaian)) : ?>
+                                    <?php if (empty($hadir)) : ?>
                                         <tr>
                                             <td colspan="7">
                                                 <div class="alert alert-danger" role="alert">
@@ -114,11 +119,16 @@
                                     <?php endif; ?>
                                     <?php $i = 1; ?>
                                     <?php
-                                    foreach ($pencapaian as $row) : ?>
+                                    foreach ($hadir as $row) : ?>
                                         <tr>
-                                            <td><?= $i; ?></td>
+                                            <!-- <td><?= $i; ?></td> -->
+                                            <td class="text-center">
+                                                <a href="<?= base_url('') . 'hadir/uncheck/' . $row['id']; ?>" onclick="return confirm('Verifikasi kehadiran kanda <?= $row['name']; ?> ?');" class="btn btn-danger btn-circle" data-popup="tooltip" data-placement="top" title="Hadir"><i class="fas fa-fw fa-times " aria-hidden="true"></i>
+                                            </td>
+                                            <td><?= $row['name'] ?></td>
+                                            <td><?= $row['nim'] ?></td>
                                             <td><?= $row['angkatan'] ?></td>
-                                            <td><?= $row['total'] ?></td>
+                                            <td><?= $row['baju'] ?></td>
                                         </tr>
                                         <?php $i++; ?>
                                     <?php endforeach; ?>
@@ -189,13 +199,16 @@
 <script>
     $(function() {
         $("#pencapaian").DataTable({
-            sDom: 'lrtip',
-            "search": false,
             "responsive": true,
             "lengthChange": false,
             "autoWidth": false,
+            "buttons": ["copy", "csv", "excel", {
+                extend: 'pdf',
+                orientation: 'landscape'
+            }, "print"],
+            // searching: false
 
-        })
+        }).buttons().container().appendTo('#pencapaian_wrapper .col-md-6:eq(0)');
 
     });
 </script>

@@ -12,17 +12,6 @@ class Hadir_model extends CI_Model
         $this->load->database();
     }
 
-    public function getDataTarget()
-    {
-        $this->db->select('dpt.namakec, if(namakec=panakkukang or namakec=biringkanaya, 5500, 4500) as total');
-        // $this->db->select('dpt.namakec, count(id) as total');
-        $this->db->from('dpt');
-        // $this->db->join('kec', 'kec.namakec = dpt.namakec');
-        $this->db->group_by('namakec');
-        $this->db->order_by('idkec', 'ASC');
-        $query = $this->db->get();
-        return $query->result();
-    }
 
     public function getDataCapaian()
     {
@@ -53,8 +42,15 @@ class Hadir_model extends CI_Model
 
     public function getPesertaRegistered()
     {
-        $this->db->select('name, nim, angkatan, baju ');
+        $this->db->select('id, name, nim, angkatan, baju ');
         $this->db->where('hadir', 0);
+        $this->db->order_by('angkatan,name', 'ASC');
+        return $this->db->get('peserta')->result_array();
+    }
+    public function getPesertaHadir()
+    {
+        $this->db->select('id, name, nim, angkatan, baju ');
+        $this->db->where('hadir', 1);
         $this->db->order_by('angkatan,name', 'ASC');
         return $this->db->get('peserta')->result_array();
     }

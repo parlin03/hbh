@@ -19,9 +19,9 @@ class Hadir extends CI_Controller
         // $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array(); //arraynya sebaris
 
 
-        $data['pencapaian'] = $this->hadir_m->getPencapaian(); //array banyak
-        $data['total'] = $this->hadir_m->getPesertaTotal();
+
         $data['register'] = $this->hadir_m->getPesertaRegistered();
+        $data['hadir'] = $this->hadir_m->getPesertaHadir();
         $data['tanggal'] = $this->hadir_m->getLastDateTime();
 
         // $Capaian = $this->peserta_model->getDataCapaian();
@@ -32,5 +32,23 @@ class Hadir extends CI_Controller
         // $this->load->view('templates/topbar', $data);
         $this->load->view('hadir', $data);
         $this->load->view('templates/footer');
+    }
+    public function check($id = null)
+    {
+        $this->db->set('hadir', '1');
+        $this->db->where('id', $id);
+        $this->db->update('peserta'); // gives UPDATE mytable SET field = field+1 WHERE id = 2
+        // $this->session->set_flashdata('message', '<div class="alert alert-success" role ="alert">Data Berhasil Dihapus');
+
+        redirect('hadir');
+    }
+    public function uncheck($id = null)
+    {
+        $this->db->set('hadir', '0');
+        $this->db->where('id', $id);
+        $this->db->update('peserta'); // gives UPDATE mytable SET field = field+1 WHERE id = 2
+        // $this->session->set_flashdata('message', '<div class="alert alert-success" role ="alert">Data Berhasil Dihapus');
+
+        redirect('hadir');
     }
 }
