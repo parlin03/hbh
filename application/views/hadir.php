@@ -123,7 +123,7 @@
                                         <tr>
                                             <!-- <td><?= $i; ?></td> -->
                                             <td class="text-center">
-                                                <a href="<?= base_url('') . 'hadir/uncheck/' . $row['id']; ?>" onclick="return confirm('Verifikasi kehadiran kanda <?= $row['name']; ?> ?');" class="btn btn-danger btn-circle" data-popup="tooltip" data-placement="top" title="Hadir"><i class="fas fa-fw fa-times " aria-hidden="true"></i>
+                                                <a href="<?= base_url('') . 'hadir/uncheck/' . $row['id']; ?>" onclick="return confirm('Verifikasi tidak hadir kanda <?= $row['name']; ?> ?');" class="btn btn-danger btn-circle" data-popup="tooltip" data-placement="top" title="Hadir"><i class="fas fa-fw fa-times " aria-hidden="true"></i>
                                             </td>
                                             <td><?= $row['name'] ?></td>
                                             <td><?= $row['nim'] ?></td>
